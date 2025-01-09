@@ -1,21 +1,23 @@
 
 class Income{
-    void Tax(int monthlySalary, int hra, int pf){
+    void CalTax(int monthlySalary, int hra, int pf){
         
 
         int annual = (monthlySalary*12);
 
         int deduction = hra+pf;
 
-        int tax =   annual - deduction;
+        int taxable =   annual - deduction;
 
-        if(annual<=500000){
-            System.out.println("Tax: "+tax*(10/100));
-        } else if((annual>500000)&(annual>=1000000)){
-            System.out.println("Tax: "+tax*(20/100));
+        double tax;
+        if(taxable<=500000){
+            tax = taxable * 0.10;
+        } else if((taxable>500000)&(taxable<=1000000)){
+            tax = taxable * 0.20;
         } else{
-            System.out.println("Tax: "+tax*(30/100));
+            tax = taxable * 0.30;
         }
+        System.out.println("Tax: "+tax);
     }
 }
 
@@ -23,7 +25,7 @@ public class Demo19 {
     public static void main(String[] args) {
         Income i = new Income();
 
-        i.Tax(400000,1000,5000);
+        i.CalTax(40000,1000,5000);
 
     }
 }
