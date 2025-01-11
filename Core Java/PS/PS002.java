@@ -4,7 +4,6 @@ public class PS002 {
         int num = 223;
         System.out.println(obj.MultipleOf100(num));
     }
-
 }
 class NextMultipleOf100 {
     
