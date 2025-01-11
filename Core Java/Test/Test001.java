@@ -4,6 +4,7 @@ public class Test001 {
             if((i==5)||(i==7)){
                 continue;
             }
+            
             System.out.println(i);
         }
     }
