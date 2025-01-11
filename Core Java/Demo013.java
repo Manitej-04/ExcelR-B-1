@@ -13,7 +13,7 @@ public class Demo13 {
 
         double area = (0.5*b*h);
         
-        System.out.println("rea of the triangle: " + area);
+        System.out.println("Area of the triangle: " + area);
 
     }
 }
