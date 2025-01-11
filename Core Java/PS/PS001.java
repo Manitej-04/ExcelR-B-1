@@ -22,7 +22,6 @@ class Employee {
 	}	
 }
 
-
 class FullTimeEmployee extends Employee{
 	
 	public double basic;
