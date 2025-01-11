@@ -9,7 +9,7 @@ public class Demo2 {
 
         System.out.println("Enter num2 :");
         int num2 = sc.nextInt();
-
+        //comparing
         if(num1>num2){
             System.out.println(num1+" greater than "+num2);
         }
