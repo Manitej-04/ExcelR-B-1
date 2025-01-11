@@ -40,7 +40,6 @@ class bowler{
             }
         }
     }
-
     public void showStats(){
         if(matches==0){
             if( (balls_bowled>0)||(balls_bowled>0)){
