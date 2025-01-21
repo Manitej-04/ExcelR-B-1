@@ -1,4 +1,5 @@
 
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 class hashInt{
@@ -14,8 +15,13 @@ class hashInt{
             sum += num;
         }
         System.out.println("Sum of elements: "+sum);
-        for(int i:hash){
-            System.out.println(i);
+       
+        System.out.println("Elements: ");
+        
+        Iterator i = hash.iterator();
+        
+        while (i.hasNext()) {
+            System.out.println(i.next());
         }
    
     }
