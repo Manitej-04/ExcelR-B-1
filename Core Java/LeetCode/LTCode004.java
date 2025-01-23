@@ -1,67 +1,34 @@
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { 
-        this.val = val; this.next = next;
+import java.util.Arrays;
+
+class Solution5 {
+    public int[] twoSum(int[] nums, int target) {
+        int[] arr = new int[2];
+
+        for(int i=0; i<nums.length-1; i++){
+            for(int j=i+1; j<nums.length; j++){
+                if((nums[i]+nums[j])==target){
+                    arr[0]=i;
+                    arr[1]=j;
+                    return arr;
+                }
+            }
+        }
+        return arr;
     }
 }
-
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dummyHead;
-        int carry = 0;
-
-        while (p != null || q != null) {
-            int x = (p != null) ? p.val : 0;
-            int y = (q != null) ? q.val : 0;
-            int sum = carry + x + y;
-
-            carry = sum / 10;
-            curr.next = new ListNode(sum % 10);
-            curr = curr.next;
-
-            if (p != null) p = p.next;
-            if (q != null) q = q.next;
-        }
-
-        if (carry > 0) {
-            curr.next = new ListNode(carry);
-        }
-
-        return dummyHead.next;
-    }
-}
-
-public class LTCode004 {
-    static ListNode createList(int[] values) {
-        ListNode dummy = new ListNode(0);
-        ListNode current = dummy;
-        for (int value : values) {
-            current.next = new ListNode(value);
-            current = current.next;
-        }
-        return dummy.next;
-    }
-    static void printList(ListNode head) {
-        while (head != null) {
-            System.out.print(head.val);
-            if (head.next != null) System.out.print(" -> ");
-            head = head.next;
-        }
-        System.out.println();
-    }
-
+public class LTCode005 {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution5 s = new Solution5();
+        int[] arr = {4,2,4,2,1};
+        int target = 8;
         
-        ListNode l1 = createList(new int[]{2, 4, 3});
-        ListNode l2 = createList(new int[]{5, 6, 4});
-        ListNode result = solution.addTwoNumbers(l1, l2);
-        printList(result); 
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Target: "+target);
 
-        
+        int[] result = s.twoSum(arr, target);
+
+        System.out.println("Indices of target result are: ");
+        System.out.println(result[0] + " " + result[1]);
     }
 }
