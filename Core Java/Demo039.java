@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CharacterCheck {
+public class Demo039 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
