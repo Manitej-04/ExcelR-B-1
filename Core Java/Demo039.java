@@ -1,12 +1,21 @@
-public class Demo039 {
+import java.util.Scanner;
+
+public class CharacterCheck {
     public static void main(String[] args) {
-        int x = 7;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char input = sc.next().charAt(0);
 
-        if(Character.isUpperCase(x)){
-            System.out.println("x is uppercase");
-        } else if(Character.isLowerCase(x)){
-            System.out.println("x is lower case");
-        } else if()
+        if (Character.isUpperCase(input)) {
+            System.out.println(input + " is an uppercase letter.");
+        } else if (Character.isLowerCase(input)) {
+            System.out.println(input + " is a lowercase letter.");
+        } else if (Character.isDigit(input)) {
+            System.out.println(input + " is a digit.");
+        } else {
+            System.out.println(input + " is neither a letter nor a digit.");
+        }
 
+        sc.close();
     }
 }
