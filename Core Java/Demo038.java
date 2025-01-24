@@ -13,6 +13,7 @@ public class Demo038 {
             System.out.println(ch + " is a lowercase letter.");
         } else {
             System.out.println(ch + " is not an alphabetic character.");
+     
         }
     }
 }
