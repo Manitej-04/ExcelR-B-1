@@ -1,42 +1,30 @@
 import java.util.Scanner;
-
 public class Demo037 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter first number: ");
-        int num1 = scanner.nextInt();
-        System.out.print("Enter second number: ");
-        int num2 = scanner.nextInt();
-        System.out.print("Enter third number: ");
-        int num3 = scanner.nextInt();
-        System.out.print("Enter fourth number: ");
-        int num4 = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter First number: ");
+        int num1 = sc.nextInt();
+        
+        System.out.println("Enter Second number: ");
+        int num2 = sc.nextInt();
+        
+        System.out.println("Enter Third number: ");
+        int num3 = sc.nextInt();
+        
+        System.out.println("Enter Fourth number: ");
+        int num4 = sc.nextInt();
 
-        int max = num1;
-
-        if (num2 > max) {
-            max = num2;
-        }
-        if (num3 > max) {
-            max = num3;
-        }
-        if (num4 > max) {
-            max = num4;
-        }
-
-        System.out.println(max + " is the biggest number.");
-        // int[] numbers = new int[4];
-        // for (int i = 0; i < 4; i++) {
-        //     System.out.print("Enter number " + (i + 1) + ": ");
-        //     numbers[i] = scanner.nextInt();
-        // }
-        // int max = numbers[0];
-        // for (int i = 1; i < 4; i++) {
-        //     if (numbers[i] > max) {
-        //         max = numbers[i];
-        //     }
-        // }
-        // System.out.println(max + " is the biggest number.");
-    }
+        if((num1>num2) && (num1>num3) && (num1>num4)){
+            System.out.println("The biggest number is: "+num1);
+        }else if((num2>num1) && (num2>num3) && (num2>num4)){
+            System.out.println("The biggest number is: "+num2);
+        }else if((num3>num1) && (num3>num2) && (num3>num4)){
+            System.out.println("The biggest number is: "+num3);
+        }else if((num4>num1) && (num4>num2) && (num4>num3)){
+            System.out.println("The biggest number is: "+num4);
+        }else{
+            System.out.println("All are equal");
+        }
+    }
 }
-
