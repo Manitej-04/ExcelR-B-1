@@ -13,7 +13,6 @@ public class Demo043 {
         } else{
             lower = c;
         }
-        
         System.out.println("Lowercase of "+c+" char: "+lower);
     }
 }
