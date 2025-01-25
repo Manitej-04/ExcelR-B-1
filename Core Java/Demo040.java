@@ -16,5 +16,6 @@ public class Demo040 {
             } else {
                 System.out.println(input + " is a special character");
             }
+        
          }
 }
